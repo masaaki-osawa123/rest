@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="music_record_test" max_length="40" name="x_276087_request_p_music_record_test" type="collection">
+        <element label="jacket" max_length="400" name="sys_jacket" type="string"/>
+        <element label="Song name" max_length="400" name="sys_song_name" type="string"/>
+    </element>
+</database>
