@@ -9,7 +9,7 @@ GitHubとServiceNowを連携させる方法についてはBacklogに資料を置
 https://ppat-spf.backlog.jp/wiki/AOS/Git+hub%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6  
   
   
-**処理作成の流れ**  
+# 処理作成の流れ  
 
 ## RestMessageの作成   
 　Studioメニュー「Outbound Integrations」の中から「REST Message」を選択する。  
