@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-05 05:18:38</sys_created_on>
+        <sys_id>fe827b40db496300870a5901cf96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_276087_request_p_weather_record_test.x_276087_request_p.weather_record_test_user</sys_name>
+        <sys_package display_value="request_post" source="x_276087_request_p">2fdab6bedbb8e300870a5901cf96199f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="request_post">2fdab6bedbb8e300870a5901cf96199f</sys_scope>
+        <sys_security_acl display_value="x_276087_request_p_weather_record_test">fe827b40db496300870a5901cf96198b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_fe827b40db496300870a5901cf96198e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-05 05:18:38</sys_updated_on>
+        <sys_user_role display_value="x_276087_request_p.weather_record_test_user" name="x_276087_request_p.weather_record_test_user">b682b740db496300870a5901cf9619b6</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
