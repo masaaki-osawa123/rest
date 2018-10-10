@@ -19,26 +19,26 @@ https://ppat-spf.backlog.jp/wiki/AOS/Git+hub%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
 　～ここまでが接続に関する部分～  
   
   
-## UI Pageの作成* 
+## UI Pageの作成  
 　RestMessageを呼び出す＆検索結果を表示する画面を作成する。  
 　Studioメニュー「UI Page」の中から「Create」選択。  
 　HTMLに画面情報を設定。  
   「Processing script」に呼び出すRestを記載、後はサーバーサイドで行っておきたい処理を記載する。   
   
   
-## Tableの作成*  
+## Tableの作成  
 　Rest結果をため込む為のTableを作成する。    
 　Studioメニュー「Data Model」の中から「Table」を選択する。  
 　※細かい記載は割愛とする。  
   
   
-## Navigatorの作成（上記実行用)*  
+## Navigatorの作成（上記実行用)    
 　RestMessage、UI Pageを呼び出すためのNavigationを作成する。  
 　「Navigation」の中から「Application Menu」を選択する。  
 　Module横のNewボタンを選択し、Moduleを作成する。  
 　「Application menu」にて、作成したテーブルを選択する。  
   
   
-## 動作確認*  
+## 動作確認    
 　Filter Navigatorで作成したNavigatorを検索する。  
 　正しく表示されたら完了。  
