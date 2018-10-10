@@ -33,7 +33,7 @@ https://ppat-spf.backlog.jp/wiki/AOS/Git+hub%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
 　
  
 *・Navigatorの作成（上記実行用)*  
-　RestMessage、UI Pageを呼び出すためのNavigationを作成する。
+　RestMessage、UI Pageを呼び出すためのNavigationを作成する。  
 　「Navigation」の中から「Application Menu」を選択する。  
 　Module横のNewボタンを選択し、Moduleを作成する。 
 　「Application menu」にて、作成したテーブルを選択する。 
