@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_276087_request_p_weatherPage.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
+        <g:ui_form>
+            <button type="btn" class="btn btn-primary" name="search" value="search" >天気</button>
+			
+
+        </g:ui_form>
+		<g:evaluate jelly="true" object="true">
+			 var gr = new GlideRecord('x_276087_request_p_weather_record_test');
+			 gr.initialize();
+
+			 //var dpObj = new DOMParser();←これがエラーとなる
+			 //var xmlText += '<data><item>MZ</item><item>Mac</item></data>';
+			 //var xmlDoc = dpObj.parseFromString(xmlText, "text/xml");
+			 //var name = xmlDoc.getElementsByTagName("item");
+
+			 gr.setValue('sys_type', "test");
+			 gr.setValue('sys_rainfall' , obj);
+			 gr.insert();
+         </g:evaluate>
+
+</j:jelly>]]></html>
+        <name>weatherPage</name>
+        <processing_script><![CDATA[try { 
+    var r = new sn_ws.RESTMessageV2('x_276087_request_p.yahoo weather', 'Default GET');
+	
+    r.setStringParameterNoEscape('COORDINATES', "140.471414,38.026973");
+    r.setStringParameterNoEscape('APPID',  'dj00aiZpPUhyMVlSbXhZVEQ3NyZzPWNvbnN1bWVyc2VjcmV0Jng9ZmQ-');
+　
+	//Rest実行
+    var response = r.execute();
+    var responseBody = response.getBody();
+    var httpStatus = response.getStatusCode();
+
+	//エンコード戻す
+    var parser = new global.JSON();
+    var parsed = parser.decode(responseBody);
+	
+	var str = parser.encode(responseBody);
+	var obj = JSON.parse(str);
+	
+	//Insert Data
+	//gr.setValue('sys_type','test1');
+	//gr.setValue('sys_rainfall' , str);
+	//gr.insert();
+	
+//初期化
+var gr = new GlideRecord('x_276087_request_p_weather_record_test');
+gr.initialize();
+	
+var dpObj = new DOMParser();
+var xmlText = '<?xml version="1.0" encoding="UTF-8"?>';
+xmlText += '<data><item>MZ</item><item>Mac</item></data>';
+var xmlDoc = dpObj.parseFromString(xmlText, "text/xml");
+var itemNode = xmlDoc.getElementsByTagName("item");
+
+gr.setValue('sys_type', "test");
+gr.setValue('sys_rainfall' , obj);
+gr.insert();
+	
+	
+   // for(var i = 0; i < len; i++){
+//	   gr.setValue('sys_type',$(obj).find("Weather").eq(i).find("Type").text());
+//	   gr.setValue('sys_rainfall' , $(obj).find("Weather").eq(i).find("Rainfall").text());
+//	   gr.insert();
+//	   break;
+//    }
+	
+	
+	
+	//初期化
+	//var gr = new GlideRecord('x_276087_request_p_weather_record_test');
+	//gr.initialize();
+
+	//Insert Data
+	//gr.setValue('sys_type','test1');
+	//gr.setValue('sys_rainfall' , str);
+	//gr.insert();
+
+}
+catch(ex) {
+ //エラー
+ var message = ex.getMessage();
+}]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-05 05:42:11</sys_created_on>
+        <sys_id>83e4bb40db496300870a5901cf961960</sys_id>
+        <sys_mod_count>44</sys_mod_count>
+        <sys_name>weatherPage</sys_name>
+        <sys_package display_value="request_post" source="x_276087_request_p">2fdab6bedbb8e300870a5901cf96199f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="request_post">2fdab6bedbb8e300870a5901cf96199f</sys_scope>
+        <sys_update_name>sys_ui_page_83e4bb40db496300870a5901cf961960</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-09 08:37:36</sys_updated_on>
+    </sys_ui_page>
+</record_update>
