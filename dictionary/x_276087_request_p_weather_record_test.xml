@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="weather_record_test" max_length="40" name="x_276087_request_p_weather_record_test" type="collection">
-        <element label="Name" max_length="50" name="name" type="string"/>
-        <element label="Date" max_length="30" name="sys_date" type="glide_date_time"/>
-        <element label="Rainfall" max_length="5000" name="sys_rainfall" type="string"/>
-        <element label="Type" max_length="5000" name="sys_type" type="string"/>
-    </element>
-</database>
